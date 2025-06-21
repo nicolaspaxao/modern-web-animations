@@ -5,17 +5,14 @@ body {
 .square {
   width: 100px;
   height: 100px;
-  background-image: linear-gradient(purple, yellow);
-  transition: display 1s allow-discrete, opacity 2s;
+  background-color: gold;
+  transition: background-color 1s ease-in-out;
 
   @starting-style {
-    opacity: 1;
-    transform: scale(1);
+    background-color: skyblue;
   }
-
 }
 
-.square.hide {
-  display: none;
-  opacity: 0;
+.square.blue {
+  background-color: blue;
 }
