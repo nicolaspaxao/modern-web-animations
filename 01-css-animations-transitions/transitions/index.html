@@ -8,30 +8,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const element = document.querySelector(".square");
-        document.addEventListener("click", (event) => {
-          element.style.transform = `translateX(${
-            event.clientX - element.clientWidth / 2
-          }px) translateY(${event.clientY - element.clientHeight / 2}px)`;
-        });
-
-        element.addEventListener("transitionrun", (event) => {
-          // This event is fired when the transition was triggered
-          console.log("Transition run", event);
-        });
-
-        element.addEventListener("transitionstart", (event) => {
-          // This event is fired when the transition starts AFTER any delay
-          console.log("Transition start", event);
-        });
-        element.addEventListener("transitionend", (event) => {
-          // This event is fired when the transition ends
-          //CSS TRICKS RandonColor
-          if (event.propertyName === "transform") {
-            element.style.backgroundColor =
-              "#" + Math.floor(Math.random() * 16777215).toString(16);
-          }
-          console.log("Transition end", event);
-        });
       });
     </script>
   </head>
