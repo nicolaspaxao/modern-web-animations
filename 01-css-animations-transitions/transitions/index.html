@@ -8,15 +8,25 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const element = document.querySelector(".square");
+        const wrapper = document.querySelector(".wrapper");
         const toggle = document.querySelector(".toggle");
         toggle.addEventListener("click", () => {
           element.classList.toggle("hide");
+        });
+        const add = document.querySelector(".add");
+        add.addEventListener("click", () => {
+          const newSquare = document.createElement("div");
+          newSquare.classList.add("square");
+          wrapper.appendChild(newSquare);
         });
       });
     </script>
   </head>
   <body>
-    <div class="square"></div>
+    <div class="wrapper">
+      <div class="square"></div>
+    </div>
     <button class="toggle">Toogle Button</button>
+    <button class="add">Add Button</button>
   </body>
 </html>
