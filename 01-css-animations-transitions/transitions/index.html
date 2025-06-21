@@ -8,10 +8,15 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const element = document.querySelector(".square");
+        const toggle = document.querySelector(".toggle");
+        toggle.addEventListener("click", () => {
+          element.classList.toggle("hide");
+        });
       });
     </script>
   </head>
   <body>
-    <div class="square" />
+    <div class="square"></div>
+    <button class="toggle">Toogle Button</button>
   </body>
 </html>
