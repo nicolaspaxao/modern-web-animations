@@ -16,7 +16,7 @@ body {
   width: 10px;
   height: 50px;
   background-color: greenyellow;
-  transition: left 2s linear(0, 0.25 25% 99%, 1);
+  transition: left 2s cubic-bezier(0.12, -0.47, 0.99, 1.44);
   left: -5px;
   position: absolute;
 }
